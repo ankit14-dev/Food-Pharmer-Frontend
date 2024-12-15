@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "582861652028",
+    "project_id": "foodpharma-e2be4",
+    "storage_bucket": "foodpharma-e2be4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582861652028:android:c5b6232cc74cbb9c6b8339",
+        "android_client_info": {
+          "package_name": "com.ankit14.camera"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5eq4Zy2aEmqg5knxEkGf-dj6Am_clE3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
