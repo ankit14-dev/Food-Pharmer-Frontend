@@ -6,10 +6,10 @@ import 'package:intl/intl.dart';
 
 class FoodCard extends StatelessWidget {
   final Map itemData;
-  late String productName;
-  late String imageUrl;
-  late String uploadTime;
-  late String status;
+  late final String productName;
+  late final String imageUrl;
+  late final String uploadTime;
+  late final String status;
   FoodCard({super.key, required this.itemData}) {
     productName = (itemData['product_name'] != null)
         ? itemData['product_name']
@@ -38,7 +38,9 @@ class FoodCard extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: cardColor,
+                color: (itemData['healthStatus'] == 'Healthy')
+                    ? Colors.green.shade300
+                    : const Color.fromARGB(100, 255, 0, 0),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,12 +117,14 @@ class FoodCard extends StatelessWidget {
                             ? Text(
                                 itemData['summary'],
                                 style: const TextStyle(
-                                    fontSize: 17, color: Colors.red),
+                                  fontSize: 17,
+                                ),
                               )
                             : Text(
                                 itemData['summary'],
                                 style: const TextStyle(
-                                    fontSize: 17, color: Colors.green),
+                                  fontSize: 17,
+                                ),
                               ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -129,7 +133,9 @@ class FoodCard extends StatelessWidget {
                             const SizedBox(
                               height: 5,
                             ),
-                            Text(DateFormat('yyyy-MM-dd – kk:mm').format(DateTime.parse(itemData['upload_time'])),
+                            Text(
+                                DateFormat('yyyy-MM-dd – kk:mm').format(
+                                    DateTime.parse(itemData['upload_time'])),
                                 style: const TextStyle(
                                     fontSize: 12,
                                     backgroundColor: Color(0x000000FF))),

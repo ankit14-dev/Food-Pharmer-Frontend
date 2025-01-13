@@ -38,7 +38,7 @@ A comprehensive Flutter application for product scanning and ingredient analysis
 
 - Flutter SDK (Latest Stable Version)
 - Android Studio / VS Code
-- Xcode (for iOS/macOS development)
+- Xcode ( for iOS/macOS development)
 - Git
 
 ## 📥 Installation

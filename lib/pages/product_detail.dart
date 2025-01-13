@@ -12,13 +12,13 @@ import '../utils/constants.dart';
 class ProductDetail extends StatelessWidget {
   final Map itemDetail;
 
-  late String imageUrl;
-  late String uploadTime;
-  late Map analysis;
-  late String analysisSummary;
-  late List ingredients;
-  late Map result;
-  late String productName;
+  late final String imageUrl;
+  late final String uploadTime;
+  late final Map analysis;
+  late final String analysisSummary;
+  late final List ingredients;
+  late final Map result;
+  late final String productName;
 
   ProductDetail({super.key, required this.itemDetail}) {
     imageUrl = itemDetail['image'];

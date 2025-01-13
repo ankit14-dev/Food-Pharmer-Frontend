@@ -22,14 +22,22 @@ class IngredientsContainer extends StatelessWidget {
                         ),
                       ),
                       (ingredient['safetyLevel'] == 'Healthy')
-                          ? Text(
-                              ingredient['quantity'],
-                              style: TextStyle(color: Colors.green),
-                            )
-                          : Text(
-                              ingredient['quantity'],
-                              style: TextStyle(color: Colors.red),
-                            ),
+                          ? Container(
+                        width: 100,
+                            child: Text(
+                                ingredient['quantity'],
+                                style: TextStyle(color: Colors.green),
+                                                    overflow: TextOverflow.ellipsis,
+                              ),
+                          )
+                          : Container(
+                        width: 100,
+                            child: Text(
+                                ingredient['quantity'],
+                                style: TextStyle(color: Colors.red),
+                                                    overflow: TextOverflow.ellipsis,
+                              ),
+                          ),
 
                       // Text(ingredient['safetyLevel']),
                       // Text(ingredient['feedback']),

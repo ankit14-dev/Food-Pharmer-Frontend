@@ -45,11 +45,12 @@ class _HomePageState extends State<HomePage> {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
                 }
-                return ListView.builder(
+                return (snapshot.data?[0]==null)?Center(child: const Text("Connection to server failed...",style: TextStyle(color:Colors.red,fontSize: 25),)):ListView.builder(
                   controller: _scrollController,
                   itemCount: snapshot.data?.length,
                   itemBuilder: (context, index) {
                     print(snapshot.data?[index].runtimeType);
+
                     return FoodCard(
                       itemData: snapshot.data?[index],
                     );
